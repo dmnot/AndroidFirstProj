@@ -11,9 +11,12 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        //setContentView(R.layout.activity_main);
+        setContentView(R.layout.second_layout);
+        TextView textView = (TextView) findViewById(R.id.header); // Поиск элементп
+        // и преобразование в textView
+        textView.setText("Hi from MainActivity.java file"); // Установка другого текста
         //Text for app
-        TextView textView = new TextView(this);
+       /* TextView textView = new TextView(this);
         textView.setText("Hi Android");
         textView.setTextSize(22);
         //-------------------------------
@@ -34,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
         textView.setLayoutParams(layoutParams); //Применение параметров к тексту
         constraintLayout.addView(textView); //Закидывание внутрь ConstraintLayout'a TextView
         //---------------------------------------
-        setContentView(constraintLayout);
+        setContentView(constraintLayout);*/
 
     }
 
