@@ -11,10 +11,10 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.second_layout);
-        TextView textView = (TextView) findViewById(R.id.header); // Поиск элементп
+        setContentView(R.layout.activity_main);
+      /*  TextView textView = (TextView) findViewById(R.id.header); // Поиск элементп
         // и преобразование в textView
-        textView.setText("Hi from MainActivity.java file"); // Установка другого текста
+        textView.setText("Hi from MainActivity.java file"); // Установка другого текста*/
         //Text for app
        /* TextView textView = new TextView(this);
         textView.setText("Hi Android");
