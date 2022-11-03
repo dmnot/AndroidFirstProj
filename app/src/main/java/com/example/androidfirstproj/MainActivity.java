@@ -3,6 +3,7 @@ package com.example.androidfirstproj;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.widget.TextView;
 
@@ -12,6 +13,13 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        //-----------------------------------------------------
+       /* TextView normal = (TextView) findViewById(R.id.normal);
+        TextView bold = (TextView) findViewById(R.id.bold);
+        TextView italic = (TextView) findViewById(R.id.italic);
+        //-----------------------------------------------------
+        normal.setText("Text from java file");
+        normal.setTextColor(Color.RED);*/
       /*  TextView textView = (TextView) findViewById(R.id.header); // Поиск элементп
         // и преобразование в textView
         textView.setText("Hi from MainActivity.java file"); // Установка другого текста*/
