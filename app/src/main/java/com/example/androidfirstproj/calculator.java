@@ -3,6 +3,7 @@ package com.example.androidfirstproj;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
@@ -20,7 +21,17 @@ public class calculator extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_calculator);
         final Button  calculate = (Button) findViewById(R.id.calc);
-        calculate.setOnClickListener(view -> calculateAnswer());
+        calculate.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                calculateAnswer();
+                Intent intent = new Intent(calculator.this, MainActivity.class);
+                startActivity(intent);
+            }
+        });
+        //calculate.setOnClickListener(view -> calculateAnswer() );
+
+
     }
 
     private void calculateAnswer() {
@@ -53,12 +64,14 @@ public class calculator extends AppCompatActivity {
         }
         answer.setText(String.valueOf(solution));
     }
-    //Context training
+   /* //Context training
     TextView textView = new TextView(this);
     ListAdapter adapter = new SimpleCursorAdapter(getApplicationContext(),);
     //------------------------------
     //Доступ из класса Activity -- Наследник класса Context
     getSystemService(LAYOUT_INFLATER_SERVICE);
 
-    SharedPreferences prefs = getApplicationContext().getSharedPreferences("Prefs",NODE_PREFERENCE);
+    SharedPreferences prefs = getApplicationContext().getSharedPreferences("Prefs",NODE_PREFERENCE);*/
+
+    //Intent
 }
