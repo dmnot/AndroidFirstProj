@@ -2,11 +2,15 @@ package com.example.androidfirstproj;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ListAdapter;
 import android.widget.RadioButton;
+import android.widget.SimpleCursorAdapter;
 import android.widget.TextView;
 
 public class calculator extends AppCompatActivity {
@@ -49,4 +53,12 @@ public class calculator extends AppCompatActivity {
         }
         answer.setText(String.valueOf(solution));
     }
+    //Context training
+    TextView textView = new TextView(this);
+    ListAdapter adapter = new SimpleCursorAdapter(getApplicationContext(),);
+    //------------------------------
+    //Доступ из класса Activity -- Наследник класса Context
+    getSystemService(LAYOUT_INFLATER_SERVICE);
+
+    SharedPreferences prefs = getApplicationContext().getSharedPreferences("Prefs",NODE_PREFERENCE);
 }
