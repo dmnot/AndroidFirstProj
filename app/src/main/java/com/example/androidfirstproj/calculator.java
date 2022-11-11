@@ -61,6 +61,7 @@ public class calculator extends AppCompatActivity {
         }
         try {
             int a = 25/0;
+            throw new ArithmeticException("");
         }catch (ArithmeticException e ){
             e.printStackTrace();
         }
