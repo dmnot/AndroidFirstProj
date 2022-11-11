@@ -20,13 +20,14 @@ public class calculator extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_calculator);
-        final Button  calculate = (Button) findViewById(R.id.calc);
+        Button  calculate = (Button) findViewById(R.id.calc);
         calculate.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                calculateAnswer();
-                Intent intent = new Intent(calculator.this, MainActivity.class);
-                startActivity(intent);
+                //calculateAnswer();
+                Intent i = new Intent(calculator.this, MainActivity.class);
+                startActivity(i);
+
             }
         });
         //calculate.setOnClickListener(view -> calculateAnswer() );
